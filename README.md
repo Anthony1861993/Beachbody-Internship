@@ -13,7 +13,7 @@ log a message to the console when the video ends.
 
 Basic Play/Pause Button: 
 + General info: Create a Play/Pause button on the video screen. When it is
-toggled on/off, the text on the button is changed accordingly ("Play" when
+toggled on/off, the text inside the button is changed accordingly ("Play" when
 the video is paused and "Paused" when the video is playing). The state of 
 the new button has to be consistent with existing Play/Pause buttons, meaning
 either all of them are in the "Play" state or all of them are in
