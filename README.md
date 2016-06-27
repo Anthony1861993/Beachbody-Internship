@@ -25,7 +25,7 @@ the "Pause" state.
 Mute Functionality in Video Player: 
 + General info: Add a "remember" functionality to the "mute" button of the video player so that
 every time a user presses the "mute" button, the cookie will remember that state so that next time
-he returns to the page, the cookie will set the mute state accordingly. The expiration
+he returns to the page, the mute state will be set accordingly. The expiration
 time of the cookie is 1 day. 
 + Included folder: video 
 + Utilized MAMP to manage files locally. 
