@@ -1,0 +1,10 @@
+{
+	"variables" : {
+		"feed"		: 	"B0Xsr4HI9Tzx"
+	},
+	"styles":{
+		"bbPlugin"		:"/css/bbPlugin.css",
+		"chromecast"	:"/css/chromecast.css?a=2",
+		"player"		:"/css/player.css"
+	}
+}

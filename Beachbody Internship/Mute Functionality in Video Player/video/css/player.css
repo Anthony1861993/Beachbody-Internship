@@ -1,0 +1,334 @@
+#player {
+                width: 100%;
+                height: 100%;
+}
+.tpLayout {
+                width: 100%;
+                height: 100%;
+
+}
+.tpContainer{
+                width: 100%;
+                height: 100%;
+                border-style:solid;
+                border-width:1px;
+                border-color:#bebebe;
+                background-image: url(http://pdk.theplatform.com/images/tile.jpg);
+                padding-top: 0px;
+                padding-left: 0px;
+                padding-bottom: 0px;
+                padding-right: 0px;
+}
+html, body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                border: 0;
+}
+#releases {
+                width: 1px;
+                height: 1px;
+}
+
+.module-disclaimer {
+    position: fixed;
+    z-index: 5000;
+    left: 50%;
+    top: 50%;
+    margin-left: -355px;
+    margin-top: -300px;
+    width: 710px;
+    height: 600px;
+    background-color: #0075de;
+    display: none
+}
+.module-disclaimer .btn-close {
+    width: 17px;
+    height: 17px;
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    background: url('/images/btn-close.png')
+}
+.module-disclaimer .content {
+    padding: 30px 70px
+}
+.module-disclaimer .content .title {
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+    font-family: "proxima-nova", "arial";
+    font-weight: 300;
+    font-style: normal;
+    margin-bottom: 22px
+}
+.module-disclaimer .content .sub-title {
+    font-size: 18px;
+    color: #ffffff;
+    font-family: "proxima-nova", "arial";
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 23px
+}
+.module-disclaimer .content .text {
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 22px;
+    font-family: "proxima-nova", "arial";
+    font-weight: 300;
+    font-style: normal;
+    margin-bottom: 18px
+}
+.module-disclaimer .content .text.container-checkbox {
+    margin-top: 25px;
+    font-size: 18px
+}
+.module-disclaimer .content .text.container-checkbox input[type="checkbox"] {
+    display: none
+}
+.module-disclaimer .content .text.container-checkbox input[type=checkbox]+label:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 8px;
+    background-color: #0075de;
+    border: 2px solid #FFF;
+    border-radius: 4px
+}
+.module-disclaimer .content .text.container-checkbox input[type=checkbox]:checked+label:before {
+    content: "\2714";
+    font-size: 35px;
+    color: #2FFF24;
+    text-align: center;
+    line-height: 15px
+}
+.module-disclaimer .content .check-box {
+    margin: 0 10px 3px 0;
+    display: inline-block;
+    vertical-align: middle
+}
+.module-disclaimer .content .text-box {
+    position: absolute;
+    top: 95px;
+    bottom: 125px;
+    left: 70px;
+    right: 70px;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.3);
+    overflow: hidden
+}
+.module-disclaimer .content .btn-decline,
+.module-disclaimer .content .btn-accept {
+    width: 270px;
+    text-align: center;
+    line-height: 33px;
+    display: inline-block;
+    color: #535353;
+    background: #ffffff;
+    text-transform: uppercase;
+    font-family: "proxima-nova", "arial";
+    font-weight: 700;
+    font-style: normal;
+    border-radius: 3px
+}
+.module-disclaimer .content .btn-decline.disabled,
+.module-disclaimer .content .btn-accept.disabled {
+    opacity: 0.5;
+    cursor: default
+}
+.module-disclaimer .content .btn-decline {
+    float: left
+}
+.module-disclaimer .content .btn-accept {
+    float: right
+}
+.module-disclaimer .content label {
+    cursor: pointer;
+    display: inline
+}
+.module-disclaimer .controls {
+    position: absolute;
+    bottom: 50px;
+    left: 70px;
+    right: 70px
+}
+.module-disclaimer .mCustomScrollbar {
+    -ms-touch-action: none;
+    touch-action: none
+}
+.module-disclaimer .mCustomScrollbar.mCS_no_scrollbar {
+    -ms-touch-action: auto;
+    touch-action: auto
+}
+.module-disclaimer .mCustomScrollBox {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    max-width: 100%;
+    outline: none;
+    direction: ltr
+}
+.module-disclaimer .mCSB_container {
+    overflow: hidden;
+    width: auto;
+    height: auto
+}
+.module-disclaimer .mCSB_inside>.mCSB_container {
+    margin-right: 30px
+}
+.module-disclaimer .mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden {
+    margin-right: 0
+}
+.module-disclaimer .mCS-dir-rtl>.mCSB_inside>.mCSB_container {
+    margin-right: 0;
+    margin-left: 30px
+}
+.module-disclaimer .mCS-dir-rtl>.mCSB_inside>.mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden {
+    margin-left: 0
+}
+.module-disclaimer .mCSB_scrollTools {
+    position: absolute;
+    width: 8px;
+    height: auto;
+    left: auto;
+    top: 0;
+    right: 0;
+    bottom: 25px;
+    border-radius: 16px
+}
+.module-disclaimer .mCSB_outside+.mCSB_scrollTools {
+    right: -26px
+}
+.module-disclaimer .mCS-dir-rtl>.mCSB_inside>.mCSB_scrollTools,
+.module-disclaimer .mCS-dir-rtl>.mCSB_outside+.mCSB_scrollTools {
+    right: auto;
+    left: 0
+}
+.module-disclaimer .mCS-dir-rtl>.mCSB_outside+.mCSB_scrollTools {
+    left: -26px
+}
+.module-disclaimer .mCSB_scrollTools .mCSB_draggerContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 16px
+}
+.module-disclaimer .mCSB_scrollTools a+.mCSB_draggerContainer {
+    margin: 20px 0
+}
+.module-disclaimer .mCSB_scrollTools .mCSB_draggerRail {
+    width: 2px;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 16px
+}
+.module-disclaimer .mCSB_scrollTools .mCSB_dragger {
+    cursor: pointer;
+    width: 100%;
+    height: 30px;
+    z-index: 1
+}
+.module-disclaimer .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    position: relative;
+    width: 8px;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 16px;
+    text-align: center;
+    background: #ffffff
+}
+.module-disclaimer .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
+.module-disclaimer .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar {
+    width: 12px
+}
+.module-disclaimer .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded+.mCSB_draggerRail,
+.module-disclaimer .mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail {
+    width: 8px
+}
+.module-disclaimer .mCSB_scrollTools .mCSB_buttonUp,
+.module-disclaimer .mCSB_scrollTools .mCSB_buttonDown {
+    display: block;
+    position: absolute;
+    height: 20px;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    cursor: pointer
+}
+.module-disclaimer .mCSB_scrollTools .mCSB_buttonDown {
+    bottom: 0
+}
+
+@media (max-width: 767px) {
+    .module-disclaimer {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin-left: 0;
+        margin-top: 0;
+        width: 100%;
+        height: 100%
+    }
+    .module-disclaimer .btn-close {
+        right: 12px;
+        top: 12px
+    }
+    .module-disclaimer .content {
+        padding: 30px 10px
+    }
+    .module-disclaimer .content .title {
+        text-align: center;
+        font-size: 24px;
+        color: #ffffff;
+        font-family: "proxima-nova", "arial";
+        font-weight: 300;
+        font-style: normal;
+        margin-bottom: 22px
+    }
+    .module-disclaimer .content .sub-title {
+        font-size: 14px;
+        color: #ffffff;
+        font-family: "proxima-nova", "arial";
+        font-weight: 700;
+        font-style: normal;
+        margin-bottom: 23px
+    }
+    .module-disclaimer .content .text {
+        font-size: 14px;
+        color: #ffffff;
+        line-height: 22px;
+        font-family: "proxima-nova", "arial";
+        font-weight: 300;
+        font-style: normal;
+        margin-bottom: 18px
+    }
+    .module-disclaimer .content .check-box {
+        margin: 0 10px 3px 0;
+        display: inline-block;
+        vertical-align: middle
+    }
+    .module-disclaimer .content .text-box {
+        top: 65px;
+        bottom: 95px;
+        left: 10px;
+        right: 10px
+    }
+    .module-disclaimer .content .controls {
+        bottom: 35px;
+        left: 10px;
+        right: 10px
+    }
+    .module-disclaimer .content .btn-decline,
+    .module-disclaimer .content .btn-accept {
+        width: 45%
+    }
+}

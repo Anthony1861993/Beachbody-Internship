@@ -1,0 +1,110 @@
+/* Tesing */
+
+.bb-overlay {
+    position: fixed;
+    top: 0px; left: 0px; right: 0px; bottom: 33px;
+    display: none;
+}
+
+body:after {         /* Preload the images */
+    display: none;
+    content:    url('../images/bb_rw.png') url('../images/bb_rw_pressed.png') url('../images/bb_pause.png') url('../images/bb_pause_pressed.png') url('../images/bb_play.png') url('../images/bb_play_pressed.png') url('../images/bb_ff.png') url('../images/bb_ff_pressed.png');
+}
+
+.bb-overlay-button, .bb-overlay-button:focus {
+    display: inline-block;
+
+
+    border: none;
+    outline: none;
+}
+
+#btn-more-info-bg{
+    left: 4%;
+    bottom: 13%;
+    background-color: #488FD2;
+    width: 100px;
+    text-align: center;
+    height: 25px;
+    opacity: 1;
+    position: absolute;
+    border-radius: 5px;
+    color: #ffffff;
+    vertical-align: middle;
+}
+
+#lbl-more-info{
+	width: 100%;
+    height: 100%;
+    color: #ffffff;
+    position: absolute;
+    text-align: center;
+    font-size: 11pt;
+    top: 5px;
+    font-family: arial;
+}
+
+
+.bb-rw-button-large {
+    width: 25%; height: 100%;
+
+    background-image: url('../images/bb_rw.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto 10%;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.bb-rw-button-large:hover, .bb-rw-button-large:active {
+    background-image: url('../images/bb_rw_pressed.png');
+}
+
+.bb-play-button-large {
+    width: 50%; height: 100%;
+
+    background-image: url('../images/bb_pause.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto 10%;
+    background-color: rgba(0,0,0,0.1);
+}
+
+.bb-play-button-large:hover, .bb-play-button-large:active {
+    background-image: url('../images/bb_pause_pressed.png');
+}
+
+.bb-play-button-large.paused {
+    background-image: url('../images/bb_play.png');
+}
+
+.bb-play-button-large.paused:hover , .bb-play-button-large.paused:active  {
+    background-image: url('../images/bb_play_pressed.png');
+}
+
+.bb-ff-button-large {
+    width: 25%; height: 100%;
+
+    background-image: url('../images/bb_ff.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto 10%;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.bb-ff-button-large:hover, .bb-ff-button-large:active {
+    background-image: url('../images/bb_ff_pressed.png');
+}
+
+.bb-button-button-large {
+    background-color: purple;
+    width: 100px; height: 100px;
+    padding: 10px;
+    background-position: center center;
+    font-size: 15px; 
+    padding-bottom: 50px;
+    vertical-align: middle;
+}
+/*
+.bb-button-button-large.paused {
+    background-image: url('../images/bb_play.png');
+}*/
