@@ -1,7 +1,7 @@
 # Beachbody-Internship: Summer 2016
 Projects that I worked on at Beachbody as an intern:
 
-Basic PDK drilling: 
+Basic PDK Drilling: 
 + Included file: player.js. 
 + Downloaded player.js from any video from club.teambeachbody.com to debug/experiment. 
 + Utilized Charles, a web debugging proxy, to map local files to remote locations. 
@@ -12,5 +12,7 @@ Basic PDK drilling:
 
 Basic Play/Pause Button: 
 +
+
+
 
 +
