@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<title>test page</title>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="tp:PreferredRuntimes" content="universal,flash" />
+	<meta name="tp:PreferredFormats" content="M3U" />
+	<meta name="tp:initialize" content="false" />
+	<script type="text/javascript">
+		window.location = "./video.php";
+	</script>
+
+	<script type="text/javascript" data-main="//player-qa1.beachbodyondemand.com/js/bbMain.php?v=.js" src='//player-qa1.beachbodyondemand.com/js/require.js'></script>
+</head>
+<body bgcolor="#999999">
+	<div id="player"></div>
+	<script text="text/javascript" data-main="test.php?v=.js" src='/js/require.js'></script>
+	
+	<script>	
+		window.bbPlayerOnload = function(){
+			var bbConfig 			= {};
+			//beach body program name
+			bbConfig.programName	= "Body Beast:Build: Chest/Tris";
+			//beach body profile ID
+			bbConfig.profileID 		= "03B6E04F-6009-4B1E-8223-08D83BA96C9C";
+			//viewer email hash e.g. bbuid
+			bbConfig.emailHash 		= "557ced1f700b673691927a20f147cddf548e27435917ea133fa82c1f5f8d5fd0";
+			//mpx media reference id
+			bbConfig.mpxReferenceID = "22HC0002B02";
+			
+			bbPlayer.createPlayer(bbConfig, "player");
+		}
+	</script>
+
+</br>
+</br>
+</body>
+</html>

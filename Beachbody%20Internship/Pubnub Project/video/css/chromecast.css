@@ -1,0 +1,204 @@
+#casting-icon {
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+    cursor: pointer;
+    display: none;
+    height: 36px;
+    left: 49%;
+    position: absolute;
+    top: 46%;
+    width: 36px;
+    z-index: 200;
+}
+
+#casting-icon.load {
+    background-image: url(../images/casting-icon-load.gif);
+    cursor: default;
+}
+
+#casting-icon.pause {
+    background-image: url(../images/casting-icon-pause.png);
+}
+
+#casting-icon.play {
+    background-image: url(../images/casting-icon-play.png);
+}
+
+#chromecast-intro {
+    background: #000000;
+    display: none;
+    height: 100%;
+    opacity: 0.8;
+    position: absolute;
+    width: 100%;
+    z-index: 3002;
+}
+#chromecast-intro .text {
+    bottom: 70px;
+    color: #ffffff;
+    font-family: "Verdana";
+    font-size: 40px;
+    position: absolute;
+    right: 50px;
+    width: 480px;
+}
+#chromecast-intro .focus {
+    background-image: url(../images/halo.png);
+    bottom: -57px;
+    height: 145px;
+    position: absolute;
+    right: -8px;
+    width: 145px;
+}
+
+#connecting-icon {
+    background-image: url(../images/connecting.gif);
+    background-repeat: no-repeat;
+    background-size: 22px 24px;
+    bottom: 5px;
+    display: none;
+    height: 24px;
+    position: absolute;
+    right: 54px;
+    width: 23px;
+    z-index: 101;
+}
+
+#expanded-controls-play {
+    background-repeat: no-repeat;
+    bottom: -1px;
+    cursor: pointer;
+    height: 33px;
+    left: -1px;
+    position: absolute;
+    width: 44px;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 1);
+}
+
+#expanded-controls-play.play {
+    background-image: url(../images/expanded-controls-play.png);
+}
+
+#expanded-controls-play.pause {
+    background-image: url(../images/expanded-controls-pause.png);
+}
+
+#pdk-player-container {
+    display: none;
+}
+
+#pdk-player-overlay {
+    bottom: 0;
+    display: none;
+    height: 50px;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 998;
+}
+
+#pdk-player-overlay .background {
+    background: #000000;
+    height: 100%;
+    opacity: 0.8;
+}
+
+#pdk-player-overlay .control-panel {
+    bottom: 0;
+    background: #B9B9B9;
+    height: 55px;
+    position: absolute;
+    width: 100%;
+}
+
+#pdk-player-overlay .control-panel .center {
+    margin: auto;
+    padding-top: 10px;
+    width: 500px;
+}
+
+#pdk-player-overlay .control-panel .center > div {
+    float: left;
+    margin-right: 20px;
+}
+
+#pdk-player-overlay .control-panel .center .btn {
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#pdk-player-overlay .control-panel .center .description {
+    width: 260px;
+}
+
+#pdk-player-overlay .control-panel .center .description .receiver {
+    color: #666666;
+    font-size: 13px;
+}
+
+#pdk-player-overlay .control-panel .center .description .title {
+    color: #333333;
+    font-size: 19px;
+}
+
+#pdk-player-overlay-play {
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    height: 30px;
+    margin-top: 4px;
+    width: 30px;
+}
+
+#pdk-player-overlay-play.pause {
+    background-image: url(../images/overlay-pause.png);
+}
+
+#pdk-player-overlay-play.play {
+    background-image: url(../images/overlay-play.png);
+}
+
+#pdk-player-overlay-thumbnail {
+    background-repeat: no-repeat;
+    background-size: 64px 36px;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+    height: 36px;
+    width: 64px;
+}
+
+#pdk-player-overlay-cast {
+    background: url(../images/overlay-cast.png) no-repeat;
+    background-size: 30px 25px;
+    height: 25px;
+    width: 30px;
+}
+
+#video-modal-footer {
+    background: rgba(0, 0, 0, 0.6);
+    color: #FFFFFF;
+    display: none;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 0;
+}
+
+#video-modal-footer #video-modal-footer-title, #video-modal-footer #video-modal-footer-receiver {
+    left: 40px;
+    position: absolute;
+    font-family: "Verdana";
+}
+
+#video-modal-footer-receiver {
+    bottom: 140px; /*40px;*/
+    font-size: 20px;
+    font-weight:lighter;
+    color:#BBBBBB;
+}
+
+#video-modal-footer-title {
+    bottom: 165px; /*60px;*/
+    font-size: 60px;
+}

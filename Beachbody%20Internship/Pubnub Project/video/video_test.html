@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<title>iFrame Embed Test</title>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="tp:PreferredRuntimes" content="universal,flash" />
+	<meta name="tp:PreferredFormats" content="M3U" />
+	<meta name="tp:initialize" content="false" />
+</head>
+<body bgcolor="#999999">
+
+	<iframe id="videoPlayer" src="./video.php?guid=21X19248B07&display=21%20Day%20Fix%20Extreme:%20Yoga%20Fix%20Extreme" width="1024" height="576" frameborder="0" style="margin:0 auto;"></iframe>
+
+	<script>
+		
+		var iframe = document.getElementById('videoPlayer'); 
+		var sourceDomain = window.location.href.split("/")[0]+"//"+document.domain;
+
+		iframe.onload = function() { 
+			console.log("[BB] Parent: Trying to post message...");
+
+			iframe.contentWindow.postMessage({
+			type:"playlist",
+			interval:10000,
+			startIndex:2,
+			playlist: 	[
+							{guid:"21X19241B01", title:"21X Video 1"}, 
+							{guid:"21X19242B02", title:"21X Video 2"}, 
+							{guid:"21X19243B03", title:"21X Video 3"}, 
+							{guid:"21X19245B04", title:"21X Video 4"},
+							{guid:"21X19246B05", title:"21X Video 5"},
+							{guid:"21X19247B06", title:"21X Video 6"},
+							{guid:"21X19248B07", title:"21X Video 7"},
+							{guid:"21X19400B08", title:"21X Video 8"}
+						]
+			}, sourceDomain);
+		};
+	</script>
+
+</br>
+</br>
+</body>
+</html>

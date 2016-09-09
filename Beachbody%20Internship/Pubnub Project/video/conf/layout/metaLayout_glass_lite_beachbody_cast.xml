@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<controls>
+	<region id="tpAdCountdownRegion">
+		<row id="tpAdCountdownContainer">
+			<control id="tpAdCountdown"/>
+		</row>
+	</region>
+	<region id="tpBottomFloatRegion" alpha="75" initialHideDelay="8400ms" autoHideDelay="6700ms">
+		<row verticalAlign="bottom" height="44"></row>
+		<row verticalAlign="bottom" height="20">
+			<group percentWidth="100" direction="horizontal" verticalAlign="middle">
+				<spacer width="15"/>
+				<control id="tpScrubber" height="5"/>
+				<spacer width="15"/>
+			</group>
+		</row>
+		<row verticalAlign="middle" height="38">
+			<spacer width="7"/>
+			<control id="tpPlay"/>
+			<spacer width="7"/>
+			<control id="tpCurrentTime"/>
+			<control id="tpTimeDivider"/>
+			<control id="tpTotalTime"/>
+			<spacer width="20"/>
+			<control id="tpVolume" expandDirection="right" scaleIcon="true"/>
+			<spacer width="50%"/>
+			<control id="tpButton" icon="IconAudio" name="languageMenuButton" callback="languageMenuHandler" label="Audio" showLabel="false" showMenu="false"/>
+			<control id="tpFullScreen" scaleIcon="true"/>
+			<control id="tpButton" callback="showChromecast" scaleIcon="true" icon="IconCast"/>
+			<spacer width="7"/>
+		</row>
+		<row verticalAlign="bottom" height="16"></row>
+	</region>
+</controls>

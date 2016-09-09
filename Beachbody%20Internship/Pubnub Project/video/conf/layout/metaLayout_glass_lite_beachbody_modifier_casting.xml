@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<layout>
+<controls>
+	<card id="tpNormalControls">
+		<region id="tpBottomFloatRegion" alpha="75" initialHideDelay="1000000s" autoHideDelay="1000000s">
+			<row verticalAlign="bottom" height="44"></row>
+			<row verticalAlign="bottom" height="20">
+				<group percentWidth="100" direction="horizontal" verticalAlign="middle">
+					<spacer width="15"/>
+					<control id="tpScrubber" height="5"/>
+					<spacer width="15"/>
+				</group>
+			</row>
+			<row verticalAlign="middle" height="38">
+				<spacer width="15"/>
+				<control id="tpCurrentTime"/>
+				<control id="tpTimeDivider"/>
+				<control id="tpTotalTime"/>
+				<spacer width="20"/>
+				<control id="tpVolume" expandDirection="right" scaleIcon="true"/>
+				<spacer width="50%"/>
+				<control id="tpButton" icon="IconModifier" name="modifierMenuButton" callback="modifierMenuHandler" label="MOD" showLabel="false" showMenu="false"/>
+				<control id="tpButton" icon="IconAudio" name="languageMenuButton" callback="languageMenuHandler" label="Audio" showLabel="false" showMenu="false"/>
+				<control id="tpFullScreen" scaleIcon="true"/>
+				<control id="tpButton" callback="showChromecast" scaleIcon="true" icon="IconCasting"/>
+				<spacer width="7"/>
+			</row>
+			<row verticalAlign="bottom" height="16"></row>
+		</region>
+	</card>
+	<card id="tpAdvertisementControls">
+		<region id="tpBottomFloatRegion" initialHideDelay="30000ms">
+			<row verticalAlign="middle" horizontalAlign="right" height="40">
+				<control id="tpPlay" tooltipEnabled="false" width="41" height="41"/>
+				<group percentWidth="100" direction="horizontal" verticalAlign="middle">
+					<control id="tpScrubber"/>
+					<spacer width="15"/>
+					<control id="tpCurrentTime"/>
+					<control id="tpTimeDivider"/>
+					<control id="tpTotalTime"/>
+					<spacer width="15"/>
+				</group>
+				<control id="tpVolume" tooltipEnabled="false" expandDirection="up" width="42" height="41"/>
+			</row>
+		</region>
+	</card>
+	<card id="tpFullScreenAdvertisementControls">
+		<region id="tpBottomFloatRegion">
+			<row verticalAlign="middle" horizontalAlign="right" height="40" backgroundColor="0x000000">
+				<control id="tpPlay" tooltipEnabled="false" width="41" height="41"/>
+				<group percentWidth="100" direction="horizontal" verticalAlign="middle">
+					<control id="tpScrubber"/>
+					<spacer width="15"/>
+					<control id="tpCurrentTime"/>
+					<control id="tpTimeDivider"/>
+					<control id="tpTotalTime"/>
+					<spacer width="15"/>
+				</group>
+				<control id="tpVolume" tooltipEnabled="false" expandDirection="up" width="42" height="41"/>
+			</row>
+		</region>
+	</card>
+</controls>
+</layout>

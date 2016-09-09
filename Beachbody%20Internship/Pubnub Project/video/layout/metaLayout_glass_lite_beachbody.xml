@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<layout>
+<controls>
+	<card id="tpNormalControls">
+		<region id="tpBottomRegion" alpha="75">
+			<row>
+				<control id="tpPlay"/>
+				<control id="tpVolume"/>
+				<group percentWidth="100" direction="horizontal" verticalAlign="middle">
+					<control id="tpScrubber"/>
+					<spacer width="15"/>
+					<control id="tpCurrentTime"/>
+					<control id="tpTimeDivider"/>
+					<control id="tpTotalTime"/>
+					<spacer width="15"/>
+				</group>
+				<control id="tpCC"/>
+			</row>
+		</region>
+	</card>
+	<card id="tpAdvertisementControls">
+		<region id="tpBottomRegion" initialHideDelay="30000ms">
+			<row verticalAlign="middle" horizontalAlign="right" height="40">
+				<control id="tpPlay" tooltipEnabled="false" width="41" height="41"/>
+				<group percentWidth="100" direction="horizontal" verticalAlign="middle">
+					<control id="tpScrubber"/>
+					<spacer width="15"/>
+					<control id="tpCurrentTime"/>
+					<control id="tpTimeDivider"/>
+					<control id="tpTotalTime"/>
+					<spacer width="15"/>
+				</group>
+				<control id="tpVolume" tooltipEnabled="false" expandDirection="up" width="42" height="41"/>
+			</row>
+		</region>
+	</card>
+	<card id="tpFullScreenAdvertisementControls">
+		<region id="tpBottomRegion">
+			<row verticalAlign="middle" horizontalAlign="right" height="40" backgroundColor="0x000000">
+				<control id="tpPlay" tooltipEnabled="false" width="41" height="41"/>
+				<group percentWidth="100" direction="horizontal" verticalAlign="middle">
+					<control id="tpScrubber"/>
+					<spacer width="15"/>
+					<control id="tpCurrentTime"/>
+					<control id="tpTimeDivider"/>
+					<control id="tpTotalTime"/>
+					<spacer width="15"/>
+				</group>
+				<control id="tpVolume" tooltipEnabled="false" expandDirection="up" width="42" height="41"/>
+			</row>
+		</region>
+	</card>
+</controls>
+</layout>
