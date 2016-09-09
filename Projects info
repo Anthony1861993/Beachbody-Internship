@@ -1,0 +1,147 @@
+These are some important info on the projects:
+
+Tien:
+erecruit.outsource.net
+
+joinme.
+
+Charles: vo "map local"
+
+PDK global controller:
+docs.theplatform.com --> search "PDK global controller"
+
+Google Chrome: Settings: clear browsing data
+(When working on local servers, sometimes we have to do this)
+
+Videos on beachbody:
+club.beachbody.com
+
+Video that I used with MAMP to work on mute functionality: 
+http://localhost/video.php?guid=21X19248B07&display=21%20Day%20Fix%20Extreme:%20Yoga%20Fix%20Extreme
+
+JIRA beachbody:
+http://jira.beachbodyondemand.local/secure/Dashboard.jspa
+
+Club.teambeachbody.com: 
+
++ No "backward," "forward" buttons.
++ When the video ends, chromecast ends. When turn chromecast on again,
+progress bar does not work. 
++ On-screen Play/Pause button: the same 
+
+PUBNUB:
+Publish key: pub-c-806c421e-8b39-48a1-b3c7-e92a4ece249d
+Subscribe key: sub-c-0b0a8f74-49f6-11e6-85a4-0619f8945a4f
+
+Check out this guy if u wanna go into AI, machine learning,...
+Andrew Ng: Machine Learning 
+
+
+
+
+------------------- Tuesday, July 12th, 2016 -------------------
+Created pubhub.js using cookie.js as boilerplate 
+Learned some json handling through http://www.w3schools.com/json/
+******* Made my first commit to s13.251
+-------------------- Wednesday, July 13th, 2016 --------------------
+PubNub Javascript SDK: https://www.pubnub.com/docs/web-javascript/pubnub-javascript-sdk 
+PubNub documentation: https://cdn.pubnub.com/pubnub-3.15.2.min.js
+--> I plan to put this documentation in 'libs' folder, maybe call it pubnubLib to differentiate it with the module pubnub.js. The file bbMain.php can reference this lib as 'libs/pubnubLib'
+Some PubNub tutorials on youtube: https://www.youtube.com/watch?v=uaLnOlrBGtU
+-------------------- Thursday, July 14th, 2016 --------------------------
+I just played around with Init/Subscribe/Publish/History functions 
+"Clear history" functionality in PubNub is available in the future: https://www.pubnub.com/knowledge-base/discussion/496/how-do-i-clear-the-channel-history
+******* Made my second commit to s13.251
+--------------------- Friday, July 15th, 2016 -------------------------------
+IMPORTANT: The JavaScript client SDK, like many of the PubNub SDKs, is asynchronous. This might be an issue with getPubnub() because the function might return before it gets the history value, resulting in the function always returning null. 
+Solution: Sleep? https://www.sitepoint.com/delay-sleep-pause-wait/
+Javascript API reference: https://www.pubnub.com/docs/web-javascript/api-reference
+---------------------- Monday, July 18th, 2016 -------------------------------
+Still working on the asynchronous Pubnub functions. 
+Okay, I give up. Just sent Pubnub an email asking for some technical help. Apparently, in Ruby API, the history() function has a parameter called http_sync to enable synchronous running:
+https://www.pubnub.com/docs/ruby/api-reference#history, so I am sending them an email asking if there is or will be something similar to that for Javascript, maybe in the future, perhaps?
+(Stuff I tried before giving up: Sleep, while loop, for loop, setTimeout, etc.)
+------------------------ Tuesday, July 19th, 2016 -------------------------------
+Good news: Doug suggested creating a "listener" function in resumehandler.js to catch the history value asynchronously. This way, we don't have to enable synchronous running for Pubnub history() function. I tested it and it worked. But the code is a little sloppy in resumehandler.js. Im planning on cleaning it up a little bit. 
+A minor problem (actually not a problem, just a change of rule): When we use cookies, we can set the expiration date for a certain cookie simply by passing a time value to setCookie(). Now, when using Pubnub, we have to manually set it on the Pubnub website.
+Also, a channel can handle an unlimited number of messages (https://www.pubnub.com/knowledge-base/discussion/420/how-many-messages-can-a-channel-contain), so we don't have to worry about the users flooding the message channels or sth like that.  
+--------------------- Wednesday, July 20th, 2016 ---------------------------
+Okay, it is almost done. Right now the "Clear history" functionality is not available (as mentioned above), so Doug suggests implementing "clear cookie" by sending "-1" message to the channel. It works perfectly, and since we can send unlimited number of messages, we are good to go.
+Moving on to new tasks: figuring out the correct channel name to send messages to (vidguid | userguid), and checking the synchronization of the video player by running it on multiple devices simultaneously.   
+******* Made my third commit to s13.251
+
+
+
+
+/*
+		subscribePubnub: function(pubnubChannel) {
+
+			var pubnub = pubnubLib.init({
+                publish_key: 'pub-c-806c421e-8b39-48a1-b3c7-e92a4ece249d',
+                subscribe_key: 'sub-c-0b0a8f74-49f6-11e6-85a4-0619f8945a4f',
+                error: function (error) {
+                    console.log('Error:', error);
+                }
+            })
+
+			pubnub.subscribe({
+				channel: pubnubChannel,
+				message: function(m) {
+					console.log('[BB] message: ', m);
+				}
+			})
+		},
+		*/
+
+
+
+
+
+
+[BB] API Initialize
+playlisthandler.js:10 [BB][module.playlisthandler] Initializing...
+uimanager.js:19 [BB][module.uimanager] Initializing...
+player.js:10 [BB] json loaded.
+loaders.js:25 [BB] MPX Release: Data =  Object {$xmlns: Object, startIndex: 1, itemsPerPage: 100, entryCount: 1, entries: Array[1]}
+player.js:10 [BB] release loaded.
+player.js:10 [BB] player loaded.
+playerinterface.js:72 [BB] Web Player v9.00 Initialized.
+bbCustomMetrics.js:19 [BB][bbCustomMetrics] Init Called
+errorhandler.js:29 [BB][module.errorhandler] Initializing...
+resumehandler.js:18 [BB][module.resumehandler] Initializing...
+resumehandler.js:87 [BB] bbPlayer.config =  Object {data: Object, id: "player", width: undefined, height: undefined}
+bboverlayhandler.js:16 [BB][module.bboverlayhandler] Initializing...
+endcardhandler.js:12 [BB][module.endcardhandler] Initializing...
+menumanager.js:22 [BB][module.menumanager] Initializing...
+audiohandler.js:13 [BB][module.audiohandler] Initializing...
+cchandler.js:10 [BB][module.cchandler] Initializing...
+modifierhandler.js:12 [BB][module.modifierhandler] Initializing...
+styleshandler.js:61 [BB][module.styleshandler] Initializing...
+bbMain.php?v=.js:94 [BB][bbMain] Tealium Load Success.
+CastPlayer.js:501 [BB][CastPlayer] Unable to set cookie in parent container
+audiohandler.js:85 [BB][module.audiohandler] moduleData.data.audio_tracks:  [Object, Object, Object, Object, Object]
+menumanager.js:111 [BB][module.menumanager] Modifier menu is ready.
+cchandler.js:35 [BB][module.cchandler] event.textTracks:  [Object]
+menumanager.js:67 [BB][module.menumanager] CC menu section is ready.
+pubnub.js:62 [BB]:  [[[{"vidGuid":"21X19248B07","userGuid":"03B6E04F-6009-4B1E-8223-08D83BA96C9C"},{"date":"2016-08-05T22:18:23.356Z"},{"timecode":-1}]],"14704355033656997","14704355033656997"]
+resumehandler.js:109 [BB] BaseClip =  Object {id: "1181", isAd: false, isMid: false, noSkip: false, isOverlay: false…}
+resumehandler.js:110 [BB] Data =  Object {convivaID: "c3.Beachbody-Test", mpxAccount: "VSsHaC", mpxPlayerID: "uat2", tealiumEnv: "tags.tiqcdn.com/utag/beachbody/bod-dom/qa/utag", playerVersion: "v9.00"…}
+resumehandler.js:111 [BB] Saved Time =  -1
+menumanager.js:63 [BB][module.menumanager] Audio menu section is ready.
+menumanager.js:89 [BB][module.menumanager] Language menu is ready.
+
+Talk about:
++ build.js and how to run it with r.js 
++ "empty:" for server files
++ json
++ castPlayer, castWrapper: why the order in shim is not followed?  
++ Solution: Modulized castWrapper, but the OnGCastApiAvailable is troublesome!  
+--> just setTimeout
++ Trouble in castPlayer.js --> needs jcookie to finish 
++ 
++ Convert bbMain-min.js to bbMain-min.php 
+
+Pubnub ticket: test the hell out of it, remove comments, and add cookies fallback 
+Confluence for minification: create a write up: pitfalls, details,... just like PubNub 
+On this URL: http://confluence.beachbodyondemand.local/display/TECH/Video
+
