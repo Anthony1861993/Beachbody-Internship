@@ -1,0 +1,6 @@
+Minification: 
+Using node with requirejs and r.js, optimize all player .js and .css files into a single minified file.
+Here are links for reference. 
+node installer https://nodejs.org/en/download/
+information about optimizing with requirejs http://requirejs.org/docs/optimization.html
+directions on how to setup r.js http://www.svlada.com/require-js-optimization-part2/
