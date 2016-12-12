@@ -31,3 +31,9 @@ time of the cookie is 1 day.
 + Utilized MAMP to manage files locally. 
 + Created a Github account and used it to make a branch and worked on that branch 
 before committing all the changes to the master branch. 
+
+The PubNub project: 
++	Utilized PubNub – a realtime messaging service – to save a user’s place within a video across multiple devices
++	Utilized MAMP – a website editing software – to manage Beachbody website locally  
++	Implemented the project in JavaScript and HTML (~300 lines)
+
